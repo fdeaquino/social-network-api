@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "mongoose": "^6.8.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "social-network-api",
+  "description": "An API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fdeaquino/social-network-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fdeaquino/social-network-api/issues"
+  },
+  "homepage": "https://github.com/fdeaquino/social-network-api#readme"
 }
