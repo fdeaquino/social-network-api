@@ -12,6 +12,7 @@ const UserSchema = new Schema(
             type: String,
             required: true,
             unique: true,
+            // this RegExp validator checks if the user input is a valid email  
             match: [/.+\@.+\..+/, 'Enter a valid email']
         },
         thoughts: [
@@ -36,6 +37,11 @@ const UserSchema = new Schema(
     }
 );
 
-const User = model('User', UserSchema);
+// gets the user's total number of friends
+UserSchema.virtual('friendCount').get(function(){
+    return this.friends.length;
+});
 
+// creates the User model using the UserSchema
+const User = model('User', UserSchema);
 module.exports = User;
