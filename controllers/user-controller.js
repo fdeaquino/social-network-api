@@ -2,7 +2,7 @@ const { User } = require('../models');
 
 const userController = {
     // get all users
-    getAllUsers (req, res) {
+    getAllUser (req, res) {
         User.find({})
         // TODO: do we need to populate reactions when getting all users?
             .sort({ _id: -1 })
